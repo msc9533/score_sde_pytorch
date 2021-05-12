@@ -33,6 +33,7 @@ INCEPTION_DEFAULT_IMAGE_SIZE = 299
 
 
 def get_inception_model(inceptionv3=False):
+  return tfhub.load('tfgan_eval_inception_1')
   if inceptionv3:
     return tfhub.load(
       'https://tfhub.dev/google/imagenet/inception_v3/feature_vector/4')
